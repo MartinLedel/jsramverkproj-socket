@@ -8,7 +8,7 @@ const dsn = 'mongodb://localhost:27017';
 const colName = 'stocks';
 let stocks = [];
 
-io.origins(['https://ml-jsramverkproj.me:443']);
+io.origins(['https://frontend.ml-jsramverk.me:443']);
 
 async function findInCollection(dsn, colName, criteria, projection) {
     const client  = await mongo.connect(dsn);
@@ -62,5 +62,5 @@ io.on('connection', async function(socket) {
 });
 
 
-console.log("Server up and running on port 8300");
+console.log("Server up and running on port 9300");
 server.listen(9300);
