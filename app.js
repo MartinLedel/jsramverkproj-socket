@@ -8,6 +8,8 @@ const dsn = 'mongodb://localhost:27017';
 const colName = 'stocks';
 let stocks = [];
 
+io.origins(['https://ml-jsramverkproj.me:443']);
+
 async function findInCollection(dsn, colName, criteria, projection) {
     const client  = await mongo.connect(dsn);
     const db = await client.db();
